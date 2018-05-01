@@ -1,0 +1,25 @@
+body {
+  background-image: url('/img/clouds.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#appContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.temp {
+  font-size: 3rem;
+}
+
+.humidity {
+  font-size: 2rem;
+}
+
+.nav-buttons {
+  border-radius: 4px;
+  background-color: #fff;
+}

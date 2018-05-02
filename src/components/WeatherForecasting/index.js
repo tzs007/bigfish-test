@@ -21,7 +21,7 @@ import '../AppLayout.css';
 moment.locale('hu');
 
 class WeatherForecasting extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.getForecastedWeather('budapest');
   }
 
@@ -105,12 +105,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherForecasting);
-
-/* <CardText className="text-center temp">
-            <img
-              src={`//openweathermap.org/img/w/${weather[0].icon}.png`}
-              alt=""
-            />
-            {temp}°C
-          </CardText>
-          <CardText className="text-center humidity">{humidity}%</CardText> */

@@ -8,7 +8,7 @@ import CardLayout from '../CardLayout';
 import '../AppLayout.css';
 
 class Home extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.getCurrentWeather('budapest');
   }
 

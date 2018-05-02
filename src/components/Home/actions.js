@@ -22,12 +22,12 @@ export const getCurrentWeatherFail = error => ({
 export const getCurrentWeather = place => async dispatch => {
   try {
     dispatch(getCurrentWeatherPending());
-    const currentWeather = await axios.get('/weather', {
+    const { data } = await axios.get('/weather', {
       params: {
         q: place,
       },
     });
-    dispatch(getCurrentWeatherSuccess(currentWeather.data));
+    dispatch(getCurrentWeatherSuccess(data));
   } catch (error) {
     dispatch(getCurrentWeatherFail(error));
   }
